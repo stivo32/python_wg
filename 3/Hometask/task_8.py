@@ -6,7 +6,7 @@ flag = False
 equal_marks_before = 0
 equal_marks_after = 0
 letters = False
-indexes = list()
+indexes = ''
 # if not user_input.count('===') < 2:
 #     print 'No'
 #     exit()
@@ -31,11 +31,13 @@ for i, _ in enumerate(user_input):
     index = user_input.find('===', j)
     if index == -1:
         break
-    indexes.append(index)
+    indexes += str(index) + ' '
     j = index + 3
 print indexes
+indexes = indexes.split()
+print indexes
 for i in range(len(indexes)-1):
-    if user_input[indexes[i]+3: indexes[i+1]].isalpha():
+    if user_input[int(indexes[i])+3: int(indexes[i+1])].isalpha():
         print 'Yes'
         exit()
 print 'No'
