@@ -26,5 +26,5 @@ print 'Vowel: {}, even: {}, odd: {}'.format(dict_with_result['start_with_vowel']
                                             dict_with_result['start_with_vowel'][1],
                                             dict_with_result['start_with_vowel'][2])
 print 'Consonant: {}, even: {}, odd: {}'.format(dict_with_result['start_with_consonant'][0],
-                                            dict_with_result['start_with_consonant'][1],
-                                            dict_with_result['start_with_consonant'][2])
+                                                dict_with_result['start_with_consonant'][1],
+                                                dict_with_result['start_with_consonant'][2])
