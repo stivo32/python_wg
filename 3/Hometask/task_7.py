@@ -6,5 +6,5 @@ if len(user_input) < 2:
     print user_input
     exit()
 
-for i in range(1,len(user_input)):
+for i in range(1, len(user_input)):
     print user_input[0:i]+' '+user_input[i:]

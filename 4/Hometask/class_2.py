@@ -4,7 +4,7 @@
 
 names = ['Ann', 'Baddy', 'Robert', 'Ashley']
 
-vowels = 'AEUOI'
+vowels = 'AEUOIY'
 
 dict_with_result = {'start_with_vowel': [0, 0, 0], 'start_with_consonant': [0, 0, 0]}
 
