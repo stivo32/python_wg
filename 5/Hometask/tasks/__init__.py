@@ -13,6 +13,9 @@ TASKS = {
 
 
 def get_task(task_name):
-    return TASKS[task_name]
+    return TASKS[task_name]()
+
+if __name__ == '__main__':
+    get_task('lucky_generator')
 
 __all__ = ('get_task',)
