@@ -2,7 +2,6 @@
 import tasks
 import sys
 
-
 if __name__ == '__main__':
     args = sys.argv[1:]
     if args:

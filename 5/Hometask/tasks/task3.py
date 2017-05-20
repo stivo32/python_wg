@@ -1,4 +1,5 @@
 # coding: utf-8
+__all__ = ('main',)
 
 
 def distance(x1, y1, x2, y2):
@@ -52,5 +53,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-__all__ = ('main',)

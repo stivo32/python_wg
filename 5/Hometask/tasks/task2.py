@@ -1,4 +1,5 @@
 # coding: utf-8
+__all__ = ('main',)
 
 
 def shift_items(req_list, shift):
@@ -24,4 +25,4 @@ if __name__ == '__main__':
     main()
 
 
-__all__ = ('main',)
+

@@ -1,4 +1,5 @@
 # coding: utf-8
+__all__ = ('main',)
 
 
 def sum_digits(number):
@@ -21,4 +22,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-__all__ = ('main',)
+

@@ -1,4 +1,5 @@
 # coding: utf-8
+__all__ = ('main',)
 
 
 def mix_columns(table, column1, column2):
@@ -30,4 +31,4 @@ if __name__ == '__main__':
     main()
 
 
-__all__ = ('main',)
+
