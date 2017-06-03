@@ -15,7 +15,7 @@ def timer(t=2):
 		return wrapper
 	return decorator
 
-@timer()
+@timer(5)
 def summ(a, b, c):
 	return sum([a, b, c])
 

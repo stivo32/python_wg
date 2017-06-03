@@ -7,7 +7,6 @@ names = db.keys()
 
 def printer(name, phones):
 	print '{}: {}'.format(name, ', '.join(phones))
-
 [
 	printer(
 		name,
@@ -25,10 +24,12 @@ def printer(name, phones):
 	db[name].append(phone)
 	for name, phone in list_of_phones
 ]
+print db
 
 [
 	printer(name, phones)
 	for name, phones in db.items()
+
 ]
 
 
