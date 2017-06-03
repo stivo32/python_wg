@@ -1,3 +1,17 @@
-aaaaaaaaaaaaa
-bbbbbbbbbbbbb
-ccccccccccccc
+L = range(2, 30)
+R = set()
+while True:
+    if not L:
+        break
+    x = L.pop()
+    if x % 5 == 0 and x != 5:
+        L.insert(0, x / 5)
+        continue
+    if x % 3 == 0 and x != 3:
+        L.insert(0, x / 3)
+        continue
+    if x % 2 == 0 and x != 2:
+        L.insert(0, x / 2)
+        continue
+    R.add(x)
+print sorted(R)

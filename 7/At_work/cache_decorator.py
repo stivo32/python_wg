@@ -1,8 +1,7 @@
 # coding: utf-8
-from time import time
 
 
-def decorator(f):
+def cache_decorator(f):
 	memory = {}
 
 	def wrapper(*args):
@@ -15,7 +14,7 @@ def decorator(f):
 	return wrapper
 
 
-@decorator
+@cache_decorator
 def summ(a, b, c):
 	print 'sum is...'
 	return sum([a, b, c])
