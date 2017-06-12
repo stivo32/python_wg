@@ -4,11 +4,11 @@
 def cache_decorator(f):
 	memory = {}
 
-	def wrapper(*args):
+	def wrapper(*args, **kwargs):
 		if args in memory:
 			return memory[args]
 		else:
-			res = f(*args)
+			res = f(*args, **kwargs)
 			memory[args] = res
 			return res
 	return wrapper
