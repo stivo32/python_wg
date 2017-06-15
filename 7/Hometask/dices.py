@@ -12,28 +12,32 @@ class Dice(object):
 			previous += int(self.chance)
 		# list_with_chances = [lambda y, z, x: y < x <= z
 		#                      for x, previous, previous + chance in xrange(1, sides + 1)]
-		print self.list_with_sides
+		# print self.list_with_sides
 
 	def throw_dice(self):
 		number = randint(1, 100)
 		for i, side in enumerate(self.list_with_sides, 1):
 			if number in side:
-				return number, i
+				return i
 
 
-
-class Playes(object):
+class Player(object):
 	def __init__(self, dices):
 		self.dices = dices
 		self.bag_with_dices = []
-		for _ in self.dices:
+		for _ in xrange(self.dices):
 			self.bag_with_dices.append(Dice(6))
+		self.scores = 0
+
+	def throw_all_dices(self):
+		self.scores = sum([dice.throw_dice() for dice in self.bag_with_dices])
+		print self.scores
 
 
 def main():
-	dice = Dice(6)
-	number, side = dice.throw_dice()
-	print number, side
+	player = Player(6)
+	player.throw_all_dices()
+
 
 if __name__ == '__main__':
 	main()
