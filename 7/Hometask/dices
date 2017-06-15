@@ -1,0 +1,38 @@
+# coding: utf-8
+from random import randint
+
+
+class Dice(object):
+	def __init__(self, sides):
+		self.chance = 100.0 / sides
+		previous = 1
+		self.list_with_sides = []
+		for side in xrange(sides):
+			self.list_with_sides.append([number for number in xrange(previous, previous + int(self.chance))])
+			previous += int(self.chance)
+		# list_with_chances = [lambda y, z, x: y < x <= z
+		#                      for x, previous, previous + chance in xrange(1, sides + 1)]
+		print self.list_with_sides
+
+	def throw_dice(self):
+		number = randint(1, 100)
+		for i, side in enumerate(self.list_with_sides, 1):
+			if number in side:
+				return number, i
+
+
+class Playes(object):
+	def __init__(self, dices):
+		self.dices = dices
+		self.bag_with_dices = []
+		for _ in self.dices:
+			self.bag_with_dices.append(Dice(6))
+
+
+def main():
+	dice = Dice(6)
+	number, side = dice.throw_dice()
+	print number, side
+
+if __name__ == '__main__':
+	main()
